@@ -1,0 +1,137 @@
+<html>
+	<head>
+		<title>With you.</title>
+		<link rel="stylesheet" href="CSSISCOOL.css">
+	</head>
+
+	<body>
+		<div id="replica">
+			<h1 id="woman" style="font-family: sans-serif"></h1>
+			<h1 id="man" style="font-family: serif;"></h1>
+			<h1 id="narrator" style="font-family: Courier">With you.<br>A narrative.</h1>
+			<h1 id="daughter" style="font-family: Florence"></h1>
+			<h1 id="other" style="font-family: Arial"></h1>
+			<button id="continue" onclick="press()">Start</button>
+		</div>
+	</body>
+
+	<script>
+		var urlParams = new URLSearchParams(window.location.search)
+		var replica = document.getElementById("replica")
+		var man = document.getElementById("man")
+		var woman = document.getElementById("woman")
+		var daughter = document.getElementById("daughter")
+		var narrator = document.getElementById("narrator")
+		var button = document.getElementById("continue")
+		var i = -1
+		var speed = 90
+
+		if(urlParams.get('start') != null) i = urlParams.get('start')
+
+		var replicas = `M: 911, what's your emergency?/nW: Please... Help.../nM: What's your address, ma'am?/nW: It's... I... Don't know./nM: Okay, ma'am, please calm down and tell me what's happening./nW: I... They took me! They locked me in this room and I can't.../nM: Who took you?/nW: People! Lot's of them. Oh god, I can't... I can't breathe.../nM: Ma'am, stay with me. Can you describe the room you're in?/nW: It looks like a bathroom. It's... Please, help./nM: Help is on the way, please stay on the line./nN: *Knocking*/nW: They are here! Please, help! They'll take me! They'll kill me! Please!/nD: Mom, are you okay?/nM: Ma'am, do you know who is knocking?/nW: A witch! She's here to kill me! She'll... No!/nN: *Shuffling*/nM: Ma'am, are you okay?/nW: .../nM: Can you hear me, ma'am?/nD: Mom!/nN: *Phone call end*/nN: Act I\nThe Call./nM: 911, what's your emergency?/nW: It's you! I know you!/nM: Ma'am, please tell me what's your emergency./nW: Nancy! She's my emergency!/nM: Who is Nancy?/nW: My daughter! She thinks I am insane!/nM: Please/nW: She thinks I am a fool!/nW: Please, you have to listen!/nM: Okay./nW: Nancy, my daughter, is trying to poison me./nM: Are you sure?/nW: Yes! She keeps giving me these drinks./nW: Juice, wine, water./nW: She's poisoning everything!/nW: Even my medication, I think./nM: Your medication?/nW: Yes. My doctor gives me these pills./nW: He says they'll help me with my mind./nM: Do you have a mental illness, ma'am?/nW: Yes. But I promise this is not the case./nM: Are you certain that your daughter is trying to poison you?/nW: Absolutely. I can see the poison./nM: You can... see the poison?/nW: Yes. I can see fumes coming from every cup she gives me./nW: It's green, sometimes red. Sometimes, it's orange./nW: I think she's using differen/nD: Mom!/nW: I have to go./nN: *Phone call end*/nM: 911, what's your emergency?/nW: We've spoken. You know./nM: Ma'am, could you please tell me your name?/nW: I am Sarah. Sarah Anderson./nM: What is your address, Mrs Anderson?/nW: It's 19 Kingston Avenue./nM: What is your emergency?/nW: You know it! It's my daughter!/nM: Ma'am, could you explain to me in what exact danger you are in?/nW: She's poisoning me./nM: Do you feel unwell?/nW: Well... No. But it's because I'm not drinking the poison!/nM: Do you take your medications?/nW: No! Of course not! I've told you, it's poisoned!/nM: Do you want me to dispatch an ambulance?/nW: I need you to help me./nM: I am listening, ma'am./nW: My daughter is about to return./nW: When she does so, I will give her the phone./nW: Could you tell her that I need to go to the hospital?/nM: Do you need to find a safe place away from your daughter?/nW: Yes!/nM: Okay. I will tell your daughter that you need hospitalization./nW: Thank you./nW: .../nW: Can I get your phone number?/nM: Why?/nW: I can't trust anyone./nW: The neighbours, they don't believe me./nW: I don't have any other relatives in this town./nW: I need your help./nM: Okay./nM: My number is ***********/nN: *Door unlocking*/nD: Mom, I'm home!/nW: Here she is!/nN: *Shuffling*/nN: .../nN: .../nD: Hello?/nM: 911./nD: I am terribly sorry. My mother keeps calling and/nM: Your mother needs hospitalization./nD: ...What?/nM: Can you drive her to the nearest hospital?/nD: Yes, but... Can't you send an ambulance?/nM: Your mother is in stable condition./nM: Ambulances are used for immediate first aid./nM: If you are able to drive your mother to the hospital, then no ambulance is required in this situation./nD: ...Okay./nN: *Phone call end*/nN: Act II\nIllness./nM: Hello?/nW: It's me, Sarah!/nM: Mrs Anderson, how are you?/nW: I'm fine. I am in hospital and... Well, I can't tell you how thankful I am./nW: Thank you./nM: No need for that./nM: What I am curious about is your daughter./nM: Could you tell me why she is trying to poison you?/nW: I've no idea./nW: I'm not rich. I don't have a large house./nW: All I know is.../nW: Well.../nW: I am not sure if she is trying to poison me./nW: The doctors in the hospital are taking care of me./nW: I am in a mental ward and the medication is helping./nW: I suppose I was delirious./nW: But the thought that my daughter has it in for me won't leave./nW: I feel like there's something more to it./nW: It's her new boyfriend that puts me off./nM: Her boyfriend?/nW: Yes./nW: Nancy is dating a guy. He seems nice, but.../nN: *Sighs*/nW: I don't trust him./nW: I think it's his idea to.../nW: Well, maybe not poison me./nW: But I think he wants to do something terrible./nW: And I know that I am mentally ill./nW: I have a bad record of bad ideas and theories./nW: I once thought that my dog was actually a cat when I was younger!/nN: *Chuckles*/nW: But these thoughts usually go away when I start taking pills./nW: And I didn't have a schizophrenia break in a while./nW: The last time was seven years ago./nW: .../nW: I want to know the truth./nM: Maybe you should talk to your daughter./nW: You're right. I'll call her./nW: If I call you again and start telling you nonsense, could you please ignore me?/nW: I get these frenzies whenever I am mad./nM: Okay./nN: *Phone call end*`
+
+		var texts = []
+
+		var lines = replicas.split('/n')
+
+		for(let i = 0; i < lines.length; i++) {
+			texts.push([lines[i].substring(3), lines[i].substring(0, 1)])
+		}
+
+		showText("With you.\t\nA narrative.", "N")
+
+
+		async function line(number) {
+			if(i == 0) button.innerHTML = "Continue"
+			var text = texts[number][0],
+				person = texts[number][1]
+
+			await showText(text, person)
+		}
+
+		function sleep(ms) {
+			return new Promise(resolve => setTimeout(resolve, ms))
+		}
+
+		async function showText(text, person) {
+			button.style.display = "none"
+			button.style.color = "black"
+			var holder = replica
+
+			var h1Elements = document.getElementsByTagName("h1")
+
+			for(let i = 0; i < h1Elements.length; i++) {
+				h1Elements[i].innerHTML = ""
+			}
+			
+
+			if(person == "M") holder = man
+			else if(person == "W") holder = woman
+			else if(person == "N") holder = narrator
+			else if(person == "D") holder = daughter
+			else holder = document.getElementById("other")
+
+			if(i == 0) await sleep(3000)
+
+			if(i == 22 || i == 53 || i == 104 || i == 147) {
+				narrator.style.color = "white"
+			}
+
+			button.style.fontFamily = holder.style.fontFamily
+			return new Promise(async function(resolve, reject) {
+				for(let i = 0; i < text.length; i++) {
+					let code = text[i].codePointAt(0)
+					if(code == 10) {
+						holder.innerHTML += "<br>"
+						continue
+					}
+					
+					holder.innerHTML += text[i]
+					
+					if(code == 33 || code == 46) {
+						await sleep(500)
+						continue
+					}
+					else if(code == 9) {
+						await sleep(1000)
+						continue
+					}
+					else if(code == 32) {
+						continue
+					}
+					else if(code == 44) {
+						await sleep(100)
+						continue
+					}
+					
+
+					await sleep(speed)			
+				}
+
+				if(i == 29 || i == 49 || i == 94) {
+					i++
+					line(i)
+				}
+
+				if(i == 21 || i == 52 || i == 103 || i == 146) {
+					await sleep(4000)
+					narrator.style.color = "black"
+					await sleep(4000)
+				}
+
+				
+				await sleep(499)
+				button.style.display = ""
+				await sleep(1)
+				button.style.color = "white"
+
+				resolve()
+			})
+		}
+
+		function press() {
+			i++
+			line(i)
+		}
+	</script>
+</html>
